@@ -25,7 +25,8 @@ with open("data_mahasiswa.txt","r",encoding="utf-8") as file:
     for baris in file:
         jumlah_baris = jumlah_baris + 1
         baris = baris
-        print("Baris ke-", jumlah_baris)
+        print("Baris ke-", jumlah_baris) 
+        
         print("Isinya :", baris)
 
 print("")
