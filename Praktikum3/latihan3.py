@@ -1,4 +1,3 @@
-# Membuat Node untuk Doubly Linked List
 class Node:
     def __init__(self, data):
         self.data = data
@@ -6,18 +5,15 @@ class Node:
         self.prev = None
 
 
-# Membuat Doubly Linked List
 class DoublyLinkedList:
     def __init__(self):
         self.head = None
 
-    # Menambahkan node di akhir
     def append(self, data):
         new_node = Node(data)
 
-        # Jika list kosong
         if self.head is None:
-            self.head = new_node
+            self.head = new_nod
             return
 
         temp = self.head
@@ -27,7 +23,6 @@ class DoublyLinkedList:
         temp.next = new_node
         new_node.prev = temp
 
-    # Fungsi pencarian
     def search(self, key):
         temp = self.head
 
@@ -39,13 +34,8 @@ class DoublyLinkedList:
         return False
 
 
-# ===============================
-# Program Utama
-# ===============================
-
 dll = DoublyLinkedList()
 
-# Input elemen (sesuai contoh soal)
 elements = [2, 6, 9, 14, 20]
 
 for item in elements:

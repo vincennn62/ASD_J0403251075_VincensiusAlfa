@@ -1,16 +1,13 @@
-# Membuat Node
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
 
 
-# Membuat Linked List
 class LinkedList:
     def __init__(self):
         self.head = None
 
-    # Menambahkan node di akhir
     def append(self, data):
         new_node = Node(data)
 
@@ -24,7 +21,6 @@ class LinkedList:
 
         temp.next = new_node
 
-    # Menampilkan Linked List
     def display(self):
         temp = self.head
         while temp:
@@ -32,27 +28,21 @@ class LinkedList:
             temp = temp.next
         print("null")
 
-    # Method untuk membalik Linked List
     def reverse(self):
         prev = None
         current = self.head
 
         while current:
-            next_node = current.next   # simpan next
-            current.next = prev       # balik arah
-            prev = current            # geser prev
-            current = next_node       # geser current
+            next_node = current.next   
+            current.next = prev      
+            prev = current           
+            current = next_node     
 
         self.head = prev
 
 
-# ===============================
-# Program Utama
-# ===============================
-
 ll = LinkedList()
 
-# Input elemen dari user
 input_data = input("Masukkan elemen untuk Linked List (pisahkan dengan koma): ")
 elements = input_data.split(",")
 

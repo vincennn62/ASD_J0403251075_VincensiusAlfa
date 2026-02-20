@@ -1,16 +1,12 @@
-# Membuat Node
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
 
-
-# Membuat Linked List
 class LinkedList:
     def __init__(self):
         self.head = None
 
-    # Menambahkan node di akhir
     def append(self, data):
         new_node = Node(data)
 
@@ -24,7 +20,6 @@ class LinkedList:
 
         temp.next = new_node
 
-    # Menampilkan isi linked list
     def display(self):
         temp = self.head
         while temp:
@@ -32,11 +27,9 @@ class LinkedList:
             temp = temp.next
         print("None")
 
-    # Menghapus node berdasarkan nilai
     def delete_node(self, key):
         temp = self.head
 
-        # Jika head yang dihapus
         if temp and temp.data == key:
             self.head = temp.next
             temp = None
@@ -44,24 +37,18 @@ class LinkedList:
 
         prev = None
 
-        # Mencari node dengan nilai key
         while temp and temp.data != key:
             prev = temp
             temp = temp.next
 
-        # Jika tidak ditemukan
         if temp is None:
             print("Data tidak ditemukan")
             return
 
-        # Menghapus node
         prev.next = temp.next
         temp = None
 
 
-# ===============================
-# Contoh penggunaan
-# ===============================
 
 ll = LinkedList()
 
