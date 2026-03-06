@@ -7,11 +7,9 @@
 # ==========================================================
 def cari_maks(data, index=0):
     
-    # Base case
     if index == len(data) - 1:
         return data[index]
     
-    # Recursive case
     maks_sisa = cari_maks(data, index + 1)
     if data[index] > maks_sisa:
         return data[index]
@@ -21,3 +19,7 @@ def cari_maks(data, index=0):
 angka = [3, 7, 2, 9, 5]
 
 print("Nilai maksimum:", cari_maks(angka))
+
+# Base casenya berhenti di elemen terakhir.
+# Recursive call maju ke elemen berikutnya yang terdapat di dalam list angka (index + 1).
+# Tiap angka dibandingkan untuk mencari yang paling besar diantara yang lainnya.

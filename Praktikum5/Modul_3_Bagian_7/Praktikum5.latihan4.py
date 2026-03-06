@@ -15,4 +15,7 @@ def kombinasi(n, hasil=""):
     kombinasi(n, hasil + "A")
     kombinasi(n, hasil + "B")
 
-kombinasi(3)
+kombinasi(2)
+
+# Jumlah kombinasi yang dihasilkan adalah 2^2, setiap posisi punya 2 pilihan ada n posisi
+# Total kemungkinan = 2*2 = 2^2, pangkat 2 itu bisa diubah dengan berapa aja, kita ibarat kan saja n

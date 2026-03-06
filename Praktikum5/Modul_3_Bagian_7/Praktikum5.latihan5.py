@@ -16,3 +16,5 @@ def buat_pin(panjang, hasil=""):
         buat_pin(panjang, hasil + angka)
 
 buat_pin(3)
+
+# Untuk mencegah angka yang sama pada kode ini menggunakan perpaduan angka unik unik dan juga setiap urutan dibuat dari urutan yang berbeda sehingga tidak sama
